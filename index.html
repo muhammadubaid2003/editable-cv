@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="padding-left: 200px; padding-right: 200px;" class="container mt-5">
+        <h1 class="text-center mb-4">Dynamic Resume Builder</h1>
+        <form id="resume-form" class="mb-4">
+            <div class="card p-3 mb-3">
+                <h5 class="card-title">Personal Information</h5>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-picture">Profile Picture:</label>
+                    <input type="file" id="profile-picture" class="form-control-file" accept="image/*">
+                </div>
+            </div>
+
+            <div class="card p-3 mb-3">
+                <h5 class="card-title">Education</h5>
+                <div class="form-group">
+                    <label for="education">Education Details:</label>
+                    <textarea id="education" class="form-control" placeholder="e.g., Bachelor of Science in Computer Science - XYZ University (2015 - 2019)" required></textarea>
+                </div>
+            </div>
+
+            <div class="card p-3 mb-3">
+                <h5 class="card-title">Work Experience</h5>
+                <div class="form-group">
+                    <label for="experience">Work Experience:</label>
+                    <textarea id="experience" class="form-control" placeholder="e.g., Founder & Animator at Anim8 Doodle Motion (2021 - Present)" required></textarea>
+                </div>
+            </div>
+
+            <div class="card p-3 mb-3">
+                <h5 class="card-title">Skills</h5>
+                <div class="form-group">
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" class="form-control" placeholder="e.g., TypeScript, JavaScript, Animation" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Generate Resume</button>
+        </form>
+
+        <div style="border-radius: 15px; border-color: blue; border-style: dashed;" id="resume" class="card p-3">
+            <div style="padding-right: 30%; padding-left: 30%;" class="d-flex align-items-center mb-3">
+                <img id="resume-image" src="" alt="Profile Picture" class="profile-picture mr-3 rounded-circle">
+                <div>
+                    <h2 id="resume-name" contenteditable="true" class="editable"></h2>
+                    <p id="resume-contact" contenteditable="true" class="editable"></p>
+                </div>
+            </div>
+
+            <section>
+                <h4>Education</h4>
+                <p id="resume-education" contenteditable="true" class="editable"></p>
+            </section>
+
+            <section>
+                <h4>Experience</h4>
+                <p id="resume-experience" contenteditable="true" class="editable"></p>
+            </section>
+
+            <section>
+                <h4>Skills</h4>
+                <p id="resume-skills" contenteditable="true" class="editable"></p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
